@@ -31,14 +31,59 @@ void main() {
     // Logial OR || operator
     String jobPost2 = "Internee Software Engineer";
     String degreeOfStudying = "CS";
-    if(degreeOfStudying.equals("CS") || degreeOfStudying.equals("SE") || degreeOfStudying.equals("IT")){
-        System.out.printf("You can apply for this internship opportunity for the role of %s",jobPost2);
-        System.out.println();
+    switch (degreeOfStudying){
+        case "CS","SE","IT":
+            System.out.printf("You can apply for this internship opportunity for the role of %s",jobPost2);
+            System.out.println();
+            break;
     }
 
     // Logical NOT ! operator
     boolean notEligible = false;
     System.out.println(!notEligible);
     // Converts true into false and false into true.
+
+    // Creating a student grading system to utilize all relational, logical operators with conditional statement
+    // Criteria:
+    // Marks > 90 "A", >= 75 "B", >= 60 "C", < 60 fail
+    int marks = 90;
+    if(marks >= 90){
+        System.out.println("Congrats! You have secured a Grade A");
+    }else if(marks >= 75){
+        System.out.println("Congrats! You have secured a Grade B");
+    }else if(marks >= 60){
+        System.out.println("Congrats! You have secured a Grade C");
+    }else{
+        System.out.println("Sorry! You are failed.");
+    }
+
+    // But there is an optimize way of doing this
+    // Switch case
+    int dayNumber = 1;
+    switch(dayNumber){
+        case 1:
+            System.out.println("Monday!");
+            break;
+        case 2:
+            System.out.println("Tuesday!");
+            break;
+        case 3:
+            System.out.println("Wednesday!");
+            break;
+        case 4:
+            System.out.println("Thursday!");
+            break;
+        case 5:
+            System.out.println("Friday!");
+            break;
+        case 6:
+            System.out.println("Saturday!");
+            break;
+        case 7:
+            System.out.println("Sunday!");
+            break;
+        default:
+            System.out.println("Invalid Entry.");
+    }
 
 }
