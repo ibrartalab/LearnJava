@@ -1,10 +1,8 @@
 package coreJava.operators;
-
-import coreJava.operators.custom.DecimalToBinary;
-
 import java.lang.reflect.Array;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import coreJava.operators.custom.DecimalToBinary;
 
 public class BinarySystem {
     // In Decimal number system we have 10 ( 0 - 9), but in binary we have just two digits ( 0 0r 1)
@@ -39,14 +37,15 @@ public class BinarySystem {
 
     static void main() {
         // we could use the built-in java conversion methods
-        int num = 5;
+        /*int num = 5;
         System.out.println(Integer.toBinaryString(num));
-        System.out.println();
+        System.out.println();*/
 
         // You can also use our custom-built DecimalToBinary methods.
         // just need to create a new object of the DecimalToBinary class and then call the convertToBinary method
         DecimalToBinary dtb = new DecimalToBinary();
-        dtb.convertToBinary(5);
+        ArrayList<Integer> binaryNumber = dtb.convertToBinary(34);
+//        dtb.printBinaryToConsole(binaryNumber);
 
     }
 }

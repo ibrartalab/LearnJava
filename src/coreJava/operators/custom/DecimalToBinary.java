@@ -30,7 +30,7 @@ public class DecimalToBinary {
     // other than that this method does two more thing, getting the decimals from the decimalList once again
     // but this time its adding them into the binaryList for further use.
     // also printing the final binary combination to the console/terminal for the end-user.
-    public void convertToBinary(int decimal){
+    public ArrayList<Integer> convertToBinary(int decimal){
         // this will extract the possible decimals after each operation on decimal
         // and will add them into the decimalList
         addDecimalToList(decimal);
@@ -39,9 +39,13 @@ public class DecimalToBinary {
         for(int i: decimalList){
             binaryList.add(i%2);
         }
-        // this will reverse the binaryList and will print the result in a correct sequence
-        for(int i=binaryList.size()-1; i >= 0; i--){
-            System.out.print(binaryList.get(i));
+        return binaryList;
+    }
+
+    // this will reverse the binaryList and will print the result in a correct sequence
+    public void printBinaryToConsole(ArrayList<Integer> bList){
+        for(int i=bList.size()-1; i >= 0; i--){
+            System.out.print(bList.get(i));
         }
     }
 }
