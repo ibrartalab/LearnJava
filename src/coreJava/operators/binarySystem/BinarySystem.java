@@ -1,13 +1,11 @@
-package coreJava.operators;
-import java.lang.reflect.Array;
-import java.nio.charset.StandardCharsets;
+package coreJava.operators.binarySystem;
 import java.util.ArrayList;
 
 import coreJava.operators.custom.BinaryToDecimal;
 import coreJava.operators.custom.DecimalToBinary;
 
 public class BinarySystem {
-    // In Decimal number system we have 10 ( 0 - 9), but in binary we have just two digits ( 0 0r 1)
+    // In Decimal number system we have 10 ( 0 - 9), but in binary we have just two digits ( 0 or 1)
     // 0,1,2,3,4,5,6,7,8,9 = Decimals
     // 0,1 = Binary
     // Now to understand better we need to learn how the conversion happened from decimal to binary
@@ -37,6 +35,44 @@ public class BinarySystem {
     * so, we get our original decimal number 34
     */
 
+    /*
+    We leant how to convert decimal into binary and wise versa.
+    how to perform some mathimatical operations on binaries.
+     */
+
+    /*
+    to do binary addition as simple as the normal addition on decimals
+         0101
+      +  0010
+      the operation will go from right to left we now that.
+      1+0 = 1, 0+1=1, 1+0=1 --> 111
+      101 = 5
+      0b010 = 2
+      111 = 7
+      try on yourself by utilizing the custom converters class's in custom package.
+     */
+
+    /*
+    binary subtraction involve many steps
+    suppose you are subtracting 2 from 5, so in this case you need to find out the negative of 2 in binary
+    to get the negative binary of any number you have to use 2's complement
+    step 1: swap the bits of that number 1 with 0 and 0 with 1 and then add +1.
+    step 2: get the resulted binary and add to the binary of the first number from which subtracting 5
+    0010 = 2 positive number
+        convert into negative
+        0010
+        1101
+           1
+       10000
+        0+1+1 = 10(2 in binary) put 0 and carry 1
+        1+1+0 = 10 put 0 and carry 1
+        1+0+1 = 10 put 0 and carry 1
+        1+0+1 = 10 put 0 and carry 1
+
+        101
+
+     */
+
     static void main() {
         // we could use the built-in java conversion methods
         int num = 5;
@@ -52,7 +88,7 @@ public class BinarySystem {
         // here you can use the built-in binary to decimal converting methods
         // using the BinaryToDecimal class
         BinaryToDecimal btd = new BinaryToDecimal();
-        btd.convertToDecimal(100010);
+        btd.convertToDecimal(0b10);
 
     }
 }
