@@ -1,8 +1,8 @@
 package coreJava.binarySystem;
 import java.util.ArrayList;
 
-import coreJava.custom.BinaryToDecimal;
-import coreJava.custom.DecimalToBinary;
+import coreJava.binarySystem.custom.BinaryToDecimal;
+import coreJava.binarySystem.custom.DecimalToBinary;
 
 public class BinarySystem {
     // In Decimal number system we have 10 ( 0 - 9), but in binary we have just two digits ( 0 or 1)

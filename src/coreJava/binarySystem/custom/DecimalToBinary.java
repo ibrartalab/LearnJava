@@ -1,4 +1,4 @@
-package coreJava.custom;
+package coreJava.binarySystem.custom;
 
 import java.util.ArrayList;
 
