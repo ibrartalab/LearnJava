@@ -1,4 +1,4 @@
-package coreJava.operators.custom;
+package coreJava.custom;
 
 import java.util.ArrayList;
 
