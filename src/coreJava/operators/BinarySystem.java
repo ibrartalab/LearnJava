@@ -2,6 +2,8 @@ package coreJava.operators;
 import java.lang.reflect.Array;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+
+import coreJava.operators.custom.BinaryToDecimal;
 import coreJava.operators.custom.DecimalToBinary;
 
 public class BinarySystem {
@@ -37,15 +39,20 @@ public class BinarySystem {
 
     static void main() {
         // we could use the built-in java conversion methods
-        /*int num = 5;
+        int num = 5;
         System.out.println(Integer.toBinaryString(num));
-        System.out.println();*/
+        System.out.println();
 
         // You can also use our custom-built DecimalToBinary methods.
         // just need to create a new object of the DecimalToBinary class and then call the convertToBinary method
         DecimalToBinary dtb = new DecimalToBinary();
         ArrayList<Integer> binaryNumber = dtb.convertToBinary(34);
 //        dtb.printBinaryToConsole(binaryNumber);
+
+        // here you can use the built-in binary to decimal converting methods
+        // using the BinaryToDecimal class
+        BinaryToDecimal btd = new BinaryToDecimal();
+        btd.convertToDecimal(100010);
 
     }
 }
