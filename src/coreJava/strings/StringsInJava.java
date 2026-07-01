@@ -19,7 +19,7 @@ void main() {
 
     /*
     * Note:
-    * String object: store the references in heap.
+    * String object: store the data in heap.
     * And each time when you create a new object of the string class it allocate new memory with new reference.
      */
     String nameObj1 = new String("MyName");
@@ -32,19 +32,43 @@ void main() {
      * of the identical same strings and share its reference across all variables.
      */
 
+    // Strings are immutable what mean by that.
+    String greet = "Hello";
+    greet = "Hi";
+    System.out.println(greet); // Hi
+    /*
+     * Now you might be thinking that the string which we had created greet with initial value
+     * of "Hello" then we assign a new value which is "Hi". After printing, it is confirmed
+     * that the string has been changed. While somehow you are true, but not in this case
+     * because string create a new memory in the heap and then pointing greet to the newly created
+     * string , and after some time the old values has deleted by the GC(Garbage Collector).
+     */
+
     // In Java, we have a lot of string methods , some of the important once we gonna use it.
     String fullName  = "Ibrar Khan";
     // if we want to just extract the first name, we can easily do it with the help of substring method.
-    String firstName = fullName.substring(0,5); // We used 5 for the ending index here, but the first name ends with index 4.
-                                                //Just because the ending index is exclusive.
+    // We used 5 for the ending index here, but the first name ends with index 4.
+    //Just because the ending index is exclusive.
+    String firstName = fullName.substring(0,5);
     System.out.println(firstName);
-    System.out.println(fullName.subSequence(0,5));
 
-    String nameInCapitalCase = fullName.toUpperCase();
+    // Now these methods are used to convert the string into either lower or upper case.
+    String nameInUpperCase = fullName.toUpperCase();
     String nameInLowerCase = fullName.toLowerCase();
-    System.out.println(nameInCapitalCase);
+    System.out.println(nameInUpperCase);
     System.out.println(nameInLowerCase);
 
     // to check a specific character on a specified index
     System.out.println(fullName.charAt(4)); // r
+
+    // others
+    int fullNameLength = fullName.length(); // the length of the string(characters count)
+    String replacedFullName = fullName.replace("Khan","talab");
+    System.out.println(replacedFullName); // replace khan with talab
+    System.out.println(fullName.trim()); // remove extra spaces around the string
+    // Both are used to compare two string based on their length/size of the string.
+    // if string one has length of 3 and string two 4 it will return 1 otherwise 0.
+    System.out.println(fullName.compareTo("Ibrar Khan"));
+    System.out.println(fullName.compareToIgnoreCase("IBRAR Khan"));
+
 }
