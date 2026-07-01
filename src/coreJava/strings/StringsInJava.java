@@ -61,14 +61,42 @@ void main() {
     // to check a specific character on a specified index
     System.out.println(fullName.charAt(4)); // r
 
-    // others
-    int fullNameLength = fullName.length(); // the length of the string(characters count)
+    //---------------------------------------------------------//
+    // other useful methods of String class.
+
+    //Return the length of the string(characters count)
+    String country = "Pakistan";
+    int countryLength = country.length();
+    System.out.println(countryLength);
+
+    // It takes two params target and replacement. Target value the one which you want
+    // to replace replacement value is the one to replace with.
     String replacedFullName = fullName.replace("Khan","talab");
     System.out.println(replacedFullName); // replace khan with talab
-    System.out.println(fullName.trim()); // remove extra spaces around the string
+
+    // Trim is very useful method to use with Strings. Think of designing/implementing the auth system
+    // you basically design a form for the users to fill, but some case the users add some extra unwanted
+    // spaces to the email,username etc. fields, and it's not a good practice to store as it is the data in DB.
+    // So for this scenario we should use String.trim() method to remove all the leading and trailing spaces
+    // from the provided String.
+    String city = "   Islamabad   ";
+    System.out.println(city);
+    System.out.println(city.trim());
+
     // Both are used to compare two string based on their length/size of the string.
     // if string one has length of 3 and string two 4 it will return 1 otherwise 0.
-    System.out.println(fullName.compareTo("Ibrar Khan"));
-    System.out.println(fullName.compareToIgnoreCase("IBRAR Khan"));
+    // There are two methods the normal one and the second which is used to compare strings
+    // ignore the case.
+    System.out.println(city.compareTo("Ibrar Khan"));
+    System.out.println(city.compareToIgnoreCase("CITY"));
+
+    // To check either a string start with the specified character or not.
+    // There are two overloaded methods the normal one and the scond one which takes
+    // two params prefix(character) and toffset(the index on which its occurred) in the string.
+    boolean firstStartingChar = city.startsWith("i"); // false
+    System.out.println(firstStartingChar);
+    boolean characterWithIndex = city.startsWith("s",1);
+    System.out.println(characterWithIndex);
+    // there is one other method to check the last char in the string endsWith().
 
 }
