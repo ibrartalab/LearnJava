@@ -1,4 +1,4 @@
-package coreJava.howObjectWorks;
+package coreJava.oops.basics.howObjectWorks;
 
 public class Car {
     String name;
