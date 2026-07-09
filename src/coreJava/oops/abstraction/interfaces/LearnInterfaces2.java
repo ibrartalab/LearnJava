@@ -38,6 +38,23 @@ interface AudioSystem{
  */
 interface MediaPlayer{
     void canPlayVideo();
+
+    /**
+     * In java there is a concept of default methods which
+     * you could use inside interfaces.
+     * Why it is existed? How to utilize it effectively?
+     * Suppose this MediaPlayer interface has implemented over 100
+     * others classes which is fine right. But you had written let's suppose 10
+     * methods inside it and after some time the requirements are changed
+     * and now this interface should have another method canPlayMusic()
+     * which is quite difficult to write, because then we will be needed to
+     * implement it across all the 100 files. So, for this kind of situation we
+     * have the option provided by java to handle this.
+     */
+    default void canPlayMusic(){
+        System.out.println("Music is playing...");
+    }
+    // If you don't override default methods you can still use the default behavior of it.
 }
 
 class SmartPhone implements Camera,AudioSystem,MediaPlayer{
