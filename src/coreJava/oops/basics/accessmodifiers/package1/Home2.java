@@ -1,4 +1,4 @@
-package coreJava.oops.accessmodifiers.package1;
+package coreJava.oops.basics.accessmodifiers.package1;
 
 public class Home2 {
     static void main(String[] args) {

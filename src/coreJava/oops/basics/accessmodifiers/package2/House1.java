@@ -1,5 +1,5 @@
-package coreJava.oops.accessmodifiers.package2;
-import coreJava.oops.accessmodifiers.package1.Home1;
+package coreJava.oops.basics.accessmodifiers.package2;
+import coreJava.oops.basics.accessmodifiers.package1.Home1;
 
 public class House1 {
     static void main(String[] args) {

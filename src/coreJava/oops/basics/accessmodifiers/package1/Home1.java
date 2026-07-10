@@ -1,4 +1,4 @@
-package coreJava.oops.accessmodifiers.package1;
+package coreJava.oops.basics.accessmodifiers.package1;
 
 public class Home1 {
     // Access modifiers used to give and revoke access to some parts of the code

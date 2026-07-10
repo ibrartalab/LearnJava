@@ -1,6 +1,6 @@
-package coreJava.oops.accessmodifiers.package2;
+package coreJava.oops.basics.accessmodifiers.package2;
 
-import coreJava.oops.accessmodifiers.package1.Home1;
+import coreJava.oops.basics.accessmodifiers.package1.Home1;
 
 public class House2 extends Home1 {
     static void main(String[] args) {
