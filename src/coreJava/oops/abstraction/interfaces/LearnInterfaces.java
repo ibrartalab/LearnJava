@@ -12,7 +12,7 @@ public class LearnInterfaces {
 /**
  * Interface is a new concept which doing the same thing as abstract classes, but it
  * has its own benefits of using over abstract class.
- * While its not a pure way of achieving abstraction in our program , but in the other
+ * While it's not a pure way of achieving abstraction in our program , but in the other
  * hand its give us the flexibility to use multiple inheritance and default methods
  * creating options.
  */
