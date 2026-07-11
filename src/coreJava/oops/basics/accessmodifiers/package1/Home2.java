@@ -8,9 +8,10 @@ public class Home2 {
         home1.homeOneProtected(home2);
         home1.homeOneDefault(home2);
 
-        // h1.homeOnePrivate();
-
-        // To know uncomment line 7 and hover over on it, you will see a message saying
-        // that this is private access method you can not access it here.
+        /*
+         h1.homeOnePrivate();
+         To know uncomment line 7 and hover over on it, you will see a message saying
+         that this is private access method you can not access it here.
+        */
     }
 }

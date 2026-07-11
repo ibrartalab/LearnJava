@@ -18,6 +18,11 @@ public class Recursion {
         printNumbers(n);
     }
 
+    /**
+     * This method is taking an integer as a parameter and find the natural number series of it.
+     * @param n
+     * @return natural number
+     */
     static int findNaturalNumber(int n){
         // Base case
         if(n == 1){
@@ -26,6 +31,11 @@ public class Recursion {
         return n + findNaturalNumber(n - 1);
     }
 
+    /**
+     * This method is taking an integer as a parameter and find the factorial number of it.
+     * @param n
+     * @return factorial number
+     */
     static int findFactorialNumber(int n){
         // Base case
         if(n == 1){
@@ -34,15 +44,16 @@ public class Recursion {
         return n * findFactorialNumber(n - 1);
     }
 
+    /**
+     * This method is taking an integer number and print from 1 to n.
+     * @param n
+     */
     static void printNumbers(int n){
         // Base case
         int local = 1;
         while (local <= n){
             System.out.println(local);
             printNumbers(n -1);
-
         }
     }
-
-
 }

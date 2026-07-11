@@ -1,14 +1,17 @@
 package coreJava.oops.encapsulation;
 
 public class Encapsulation {
-    // Encapsulation is one of the oops principle which give us a way to achieve
-    // building same type or logic together in a single file to district access to it.
-    // Which is a way of hiding the data and sensitive information.
+    /*
+     Encapsulation is one of the oops principle which give us a way to achieve
+     building same type or logic together in a single file to district access to it.
+     Which is a way of hiding the data and sensitive information.
+     We basically encapsule all the logic that is worked together into one single place.
+    */
 
-    // We basically encapsule all the logic that is worked together into one single place.
-
-    // we can not access these properties outside this class even
-    // by creating an object of this class.
+    /*
+     we can not access these properties outside this class even
+     by creating an object of this class.
+    */
     private static final String city = "Karachi";
     private String capital;
     private boolean isSomthingWrong;

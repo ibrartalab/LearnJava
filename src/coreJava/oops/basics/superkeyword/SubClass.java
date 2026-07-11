@@ -1,8 +1,10 @@
 package coreJava.oops.basics.superkeyword;
 
 public class SubClass extends BaseClass {
-    // super keyword helps us to call the methods,properties and constructor of
-    // the super/parent class inside the sub/child class
+    /*
+     super keyword helps us to call the methods,properties and constructor of
+     the super/parent class inside the sub/child class
+    */
 
     private int age;
 //    private  String name;

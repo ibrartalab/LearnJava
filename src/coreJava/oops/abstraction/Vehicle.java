@@ -12,8 +12,10 @@ abstract class Vehicle {
         Which means if we need to use abstract methods inside a non-abstract class
         we must make it abstract or move them into a separate abstract class.
      */
-    // you can later override this method in its implementation class, but you do not need
-    // to write implementation for it you want to use as it is.
+    /*
+     you can later override this method in its implementation class, but you do not need
+     to write implementation for it you want to use as it is.
+    */
     public void sayHello(){
         System.out.println("Hello!");
     }

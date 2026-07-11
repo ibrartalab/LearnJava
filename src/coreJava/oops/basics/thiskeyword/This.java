@@ -5,8 +5,11 @@ public class This {
     private int randomNumber;
 
     public This(int count,int randomNumber){
-        //count = count; // this will return zero
-        //randomNumber = randomNumber; // this will return zero
+        /*
+        These will return zeros.
+        count = count;
+        randomNumber = randomNumber;
+        */
 
         this.count = count;
         this.randomNumber = randomNumber;
@@ -54,7 +57,6 @@ public class This {
 
         To handle this situation and avoid ambiguty java introduce this keyword which is
         very useful to refer the current context.
-
     */
 
     public int getCount(){

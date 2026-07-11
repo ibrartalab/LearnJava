@@ -2,14 +2,16 @@ package coreJava.conditionalStatments;
 
 public class ConditionalStatement {
     static void main() {
-        // To work with conditional statements we first need to understand some operators.
-        // Relational Operators like <(less than), >(greater than), ==(equal to),>=,<= and !(not equal to)
-        // Logical operators and ternary operators as well.
-        // We could use conditionals with these operands string,char,short,int,long
-        // Operands basically are the actual data on which you could perform operations (e.g) 2 > 3
+        /*
+         To work with conditional statements we first need to understand some operators.
+         Relational Operators like <(less than), >(greater than), ==(equal to),>=,<= and !(not equal to)
+         Logical operators and ternary operators as well.
+         We could use conditionals with these operands string,char,short,int,long
+         Operands basically are the actual data on which you could perform operations (e.g) 2 > 3
+         A good scenario where you are the hiring manager for CodeJava company(a dummy name used here) and you have been
+         some certain rules for the job role. Like minimum of five years of experience and must have a cs(computer science) degree.
+        */
 
-        // A good scenario where you are the hiring manager for CodeJava company(a dummy name used here) and you have been
-        // some certain rules for the job role. Like minimum of five years of experience and must have a cs(computer science) degree.
         String jobRole = "Mid Software Engineer";
         int minExperience = 2;
         String degreeOfStudying = "Arts";
@@ -20,9 +22,11 @@ public class ConditionalStatement {
             System.out.println("Oh! try next time.");
         }
 
-        // Creating a student grading system to utilize all relational, logical operators with conditional statement
-        // Criteria:
-        // Marks > 90 "A", >= 75 "B", >= 60 "C", < 60 fail
+        /*
+         Creating a student grading system to utilize all relational, logical operators with conditional statement
+         Criteria:
+         Marks > 90 "A", >= 75 "B", >= 60 "C", < 60 fail
+        */
         int marks = 90;
         if(marks >= 90){
             System.out.println("Congrats! You have secured a Grade A");

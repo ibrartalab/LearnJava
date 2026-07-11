@@ -20,13 +20,13 @@ public class Laptop {
             System.out.println("Creating project...");
         }
         public void accessingNonStaticFields(){
-            /** The laptopName field is not accessible here, because it is not static. */
+            // The laptopName field is not accessible here, because it is not static.
             // System.out.println(laptopName);
 
-            /**
-             * This is accessible, because laptopReg is a static member of laptop class.
-             * that is why we can easily access here. We have only access to all the
-             * static members of the Laptop class inside the nested staic VSCode class.
+            /*
+              This is accessible, because laptopReg is a static member of laptop class.
+              that is why we can easily access here. We have only access to all the
+              static members of the Laptop class inside the nested staic VSCode class.
              */
             System.out.println(laptopReg);
         }

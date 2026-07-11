@@ -1,9 +1,11 @@
 package coreJava.operators;
 
 public class RelationalOperators {
-    // relational operators help to handle some conditional based problems
-    // suppose creating a voting system you can use loops to write the basic algorithm
-    // but to handle more efficient conditions we need relational
+    /*
+     relational operators help to handle some conditional based problems
+     suppose creating a voting system you can use loops to write the basic algorithm
+     but to handle more efficient conditions we need relational
+    */
     static void main(String[] args) {
         // >= greater than equal to
         int age = 20;

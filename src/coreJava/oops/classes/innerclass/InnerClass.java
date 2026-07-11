@@ -2,7 +2,7 @@ package coreJava.oops.classes.innerclass;
 
 public class InnerClass {
     static void main(String[] args) {
-        /**
+        /*
          To use the inner class functionality, we firstly need to create
          an object of the outer enclosing class and then access the inner class.
          There are two ways to create an object of the inner class.

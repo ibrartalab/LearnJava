@@ -1,20 +1,18 @@
 package coreJava.oops.basics;
 
 public class BasicsOfOops {
-    // Object-Oriented Programming (OOP) is a development paradigm focused on classes and objects.
-    // It secures and protects data from unauthorized access through encapsulation.
-    // It also hides internal complexity using abstracted methods, shielding end users from implementation details.
-    // This structure enhances code reusability, organization, and scalability.
-
-    // We have four pillars of oops to achieve all the benefits of using it.
-    // Inheritence, Abstraction, Ploymorphism, and Encapsulations.
-    // We will definitely learn each of them one by one indetails in their own respective package, but here we are just to know
-    // the basics to confidently use it.
-
-    // Now as we know that everything in java is written and will be using inside classes and objects, by using the oops principle.
-    // What is object?, what is class?, and how to use it.
-
     /*
+     Object-Oriented Programming (OOP) is a development paradigm focused on classes and objects.
+     It secures and protects data from unauthorized access through encapsulation.
+     It also hides internal complexity using abstracted methods, shielding end users from implementation details.
+     This structure enhances code reusability, organization, and scalability.
+     We have four pillars of oops to achieve all the benefits of using it.
+     Inheritence, Abstraction, Ploymorphism, and Encapsulations.
+     We will definitely learn each of them one by one indetails in their own respective package, but here we are just to know
+     the basics to confidently use it.
+     Now as we know that everything in java is written and will be using inside classes and objects, by using the oops principle.
+     What is object?, what is class?, and how to use it.
+
     Class:
         A class is a blueprint or a sketch for an object to be crated by using it.
         class is a logical entity which does not exist in real, but it does have the power to help objects being created.
@@ -70,5 +68,5 @@ public class BasicsOfOops {
     }
 
     So, in actual this is the code to create objects => Car myCar = new Car();
-     */
+    */
 }
