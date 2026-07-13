@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Generics {
     /*
-     Generics allow you to write a single class,inheritance, or method that
+     Generics allow you to write a single class,interface, or method that
      works with different data types while maintaining strict compile-time
      type safety.
      By using parameters types like <T>.
