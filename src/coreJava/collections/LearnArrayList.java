@@ -28,11 +28,12 @@ public class LearnArrayList {
         cities.add("Peshawar");
         System.out.println(cities);
 
-        // get() return the element on the specified index.
-        System.out.println(cities.get(3));
-
-        // size() return the length or numbers of elements in the list.
-        System.out.println(cities.size());
+        /*
+         add() the own abstract method from the List(interface).
+         The add() method from the Collection interface is taking zero params and return a boolean value.
+         But this one from the List interface takes params (index,E c) and does not return anything.
+        */
+        cities.add(4,"Abbottabad");
 
         /*
          addALl() will add a list of elements to the other list
@@ -76,5 +77,35 @@ public class LearnArrayList {
 
         System.out.println(alpha.addAll(3,alpha1));
         System.out.println(alpha);
+
+        // get() return the element on the specified index.
+        System.out.println(cities.get(3));
+
+        // size() return the length or numbers of elements in the list.
+        System.out.println(cities.size());
+
+        // addFirst() to add element at the first position to the list.
+        List<Integer> numbers = new ArrayList<>();
+        numbers.add(2);
+        numbers.add(3);
+        numbers.addFirst(1);
+        System.out.println(numbers); // [1,2,3]
+        // addLast() to add element to the end of the list.
+        numbers.addLast(4);
+        System.out.println(numbers); // [1,2,3,4]
+        // set() to replace an element int the list
+        numbers.set(3,5);
+        System.out.println(numbers);
+        // contains() return a boolean value where the specified element is
+        // present in the list or not.
+        System.out.println(numbers.contains(2));
+        // containsAll() return true in case all the same elements are present
+        // inside the list and list2.
+        List<Integer> numbers1 = new ArrayList<>();
+        numbers1.add(1);
+        numbers1.add(2);
+        numbers1.add(5);
+        numbers1.add(3);
+        System.out.println(numbers.containsAll(numbers1));
     }
 }
