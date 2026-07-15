@@ -1,4 +1,4 @@
-package coreJava.collections;
+package coreJava.collections.collectionbranch;
 
 import java.util.ArrayList;
 import java.util.List;

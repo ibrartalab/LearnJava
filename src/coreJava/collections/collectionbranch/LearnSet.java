@@ -1,4 +1,4 @@
-package coreJava.collections;
+package coreJava.collections.collectionbranch;
 
 import java.util.HashSet;
 import java.util.LinkedHashSet;
