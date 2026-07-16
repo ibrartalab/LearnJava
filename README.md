@@ -117,16 +117,28 @@ We welcome contributions from everyone! Whether you want to add new content, fix
 
 ## 📁 Repository Structure
 
+LearnJava has two main packages:
+
+### **coreJava**
+Contains comprehensive Java learning materials organized by skill level:
 ```
-LearnJava/
+coreJava/
 ├── basics/              # Fundamental Java concepts
 ├── oop/                 # Object-Oriented Programming
 ├── advanced/            # Advanced topics
 ├── exercises/           # Practice problems with solutions
 ├── projects/            # Complete projects
-├── resources/           # Additional learning materials
-└── README.md            # This file
+└── resources/           # Additional learning materials
 ```
+
+### **DSAJava**
+Dedicated to Data Structures and Algorithms learning:
+```
+DSAJava/
+└── leetcode/            # LeetCode problem solutions with guided explanations
+```
+
+This structure allows learners to focus on either core Java fundamentals or DSA/competitive programming, or explore both!
 
 ## 📚 Learning Resources
 
