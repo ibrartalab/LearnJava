@@ -36,9 +36,8 @@ public class BinarySearch {
             return mid;
         } else if (nums[mid] < target) {
             return recursiveBinarySearch(nums,target,mid+1,high);
-        } else if (nums[mid] > target) {
+        } else{
             return recursiveBinarySearch(nums,target,low,mid-1);
         }
-        return recursiveBinarySearch(nums,target,low,high);
     }
 }
