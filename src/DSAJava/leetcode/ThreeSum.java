@@ -6,26 +6,34 @@ import java.util.List;
 
 public class ThreeSum {
     static void main(String[] args) {
-//        int[] nums = {-1, 0, 1, 2, -1, -4};
-        int[] nums = {0,0,0};
+        int[] nums = {-1, 0, 1, 2, -1, -4};
+//        int[] nums = {0,0,0};
         List<int[]> result = threeSum(nums);
         for(int[] r:result){
             System.out.println(Arrays.toString(r));
         }
     }
     public static List<int[]> threeSum(int[] arr){
-        int p1 = 0;
-        int p2 = 1;
-        int p3 = 2;
+        int n = arr.length;
+        Arrays.sort(arr);
         List<int[]> triplet = new ArrayList<>();
-        while(p2 < arr.length && p3 < arr.length){
-            int sum = arr[p1] + arr[p2] + arr[p3];
-            if(p1 != p2 && p1 != p3 && p2 != p3){
+        for (int i = 0; i < n-2; i++) {
+            if(i > 0 && arr[i] == arr[i-1]) continue;
+            int j = i+1;
+            int k = n-1;
+            while (j < k){
+                int sum = arr[i] + arr[j] + arr[k];
                 if(sum == 0){
-                    triplet.add(new int[]{arr[p1],arr[p2],arr[p3]});
+                    triplet.add(new int[]{arr[i],arr[j],arr[k]});
+                    while (j < k && arr[j] == arr[j+1]) j++;
+                    while (j < k && arr[k] == arr[k-1]) k--;
+                    j++;
+                    k--;
+                } else if (sum > 0) {
+                    k--;
+                }else {
+                    j++;
                 }
-                p2++;
-                p3++;
             }
         }
         return triplet;
@@ -33,7 +41,8 @@ public class ThreeSum {
 }
 
 /*
-Problem DescriptionGiven an integer array nums,
+Problem Description:
+Given an integer array nums,
 return all the triplets [nums[i], nums[j], nums[k]]
 such that:i != j, i != k, and j != k (The indices must be distinct).
 nums[i] + nums[j] + nums[k] == 0 (The values must sum to zero).
