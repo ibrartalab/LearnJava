@@ -25,6 +25,11 @@ public class LSubString {
     }
     // The better approach using HashSet().
     public static int findLongestSubString(String s){
+        if(s.isEmpty()){
+            return 0;
+        } else if (s.isBlank()) {
+            return 1;
+        }
         int left = 0;
         int resultLenght = 0;
         HashSet<Character> sHashSet = new HashSet<>();
@@ -42,6 +47,11 @@ public class LSubString {
     }
     // The optimal approach using HashMap reducing CPU cycles dynamic sized sliding window.
     public static int findLongestSubStringOptimal(String s){
+        if(s.isEmpty()){
+            return 0;
+        } else if (s.isBlank()) {
+            return 1;
+        }
         int left = 0;
         int resultLenght = 0;
         HashMap<Character,Integer> sHashMap = new HashMap<>();
