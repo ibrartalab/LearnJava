@@ -3,7 +3,7 @@ package DSAJava.leetcode;
 import java.util.HashMap;
 import java.util.HashSet;
 
-public class LSubString {
+public class LongestSubString {
     static void main(String[] args) {
         String s = "abcabcbb";
         String s2 = "pwwkew";
