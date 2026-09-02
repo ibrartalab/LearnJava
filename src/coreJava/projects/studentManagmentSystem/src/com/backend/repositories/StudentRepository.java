@@ -34,4 +34,16 @@ public class StudentRepository {
     public Collection<Student> getAllStudents(){
         return students.values();
     }
+
+    /**
+     * Use this method to find and delete a specific student form the list
+     * @param studentId It takes studentId as parameter
+     * @return If the student removed successfully it will return true otherwise false
+     */
+    public boolean deleteStudentById(int studentId){
+        Student re = students.remove(studentId);
+        return re != null;
+    }
+
+
 }
