@@ -20,6 +20,10 @@ public class Student {
         this.gpa = gpa;
     }
 
+    public int getId(){
+        return this.id;
+    }
+
     public String getName() {
         return name;
     }
