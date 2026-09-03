@@ -4,6 +4,7 @@ import coreJava.projects.studentManagmentSystem.src.com.backend.models.Student;
 
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.List;
 
 public class StudentRepository {
     // This is the in-memory db to stores all the students data
@@ -31,10 +32,14 @@ public class StudentRepository {
      * @return Return a collection of Student, to make sure you can apply all the collections
      * methods
      */
-    public Collection<Student> getAllStudents(){
-        return students.values();
+    public List<Student> getAllStudents(){
+        return students.values().stream().toList();
     }
 
+    public Student getById(int studentId){
+        return (Student) students.values().stream().
+                filter(s -> s.getId() == studentId);
+    }
     /**
      * Use this method to find and delete a specific student form the list
      * @param studentId It takes studentId as parameter

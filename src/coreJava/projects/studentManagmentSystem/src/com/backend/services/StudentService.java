@@ -58,11 +58,12 @@ public class StudentService implements Services{
 
     @Override
     public List<Student> getALlStudents() {
-        return List.of();
+        return studentRepository.getAllStudents();
     }
 
     @Override
     public Student getStudentById(int studentId) {
-        return null;
+        if(studentId <= 0) return null;
+        return studentRepository.getById(studentId);
     }
 }
