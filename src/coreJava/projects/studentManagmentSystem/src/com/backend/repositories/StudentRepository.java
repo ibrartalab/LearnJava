@@ -47,6 +47,18 @@ public class StudentRepository {
     }
 
     /*
+        This is the extended and faster version of getting a student by its id.
+        While getById() used Java stream which is a very good way of doing calculation on dataset,
+        not for normal operations like the one in our case to filter-out a student by id and return it
+        back.
+        Which is not a well sufficient here, because it will cost a O(n) time , and since we already
+        used HashMap which is a gold standard for O(1) time accessing , insertion, and even deletion on it.
+     */
+    public Student getInstantById(int studentId){
+        return students.get(studentId);
+    }
+
+    /*
         This method takes a studentId as a param to delete that specific student from the students HashMap.
         This method return a boolean value either true or false. So, if the user deleted/removed form the
         memory it will return true otherwise false.
