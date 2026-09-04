@@ -11,9 +11,10 @@ public class StudentRepository {
     // Encapsulation applied here, to protect our Student's data.
     private final HashMap<Integer, Student> students = new HashMap<>();
 
-    /**
-     * This method will add a new student to the students list
-     * @param student its take the Student itself as s param to add into the students list
+    /*
+        addStudent method will create and add a student to the students HashMap,
+        in-memory db for our app.
+        It takes Student type of object as param to validate and store it.
      */
     public void addStudent(Student student){
         // edge cases checking
@@ -27,28 +28,31 @@ public class StudentRepository {
         }
     }
 
-    /**
-     * Get all the Students records by using this public method
-     * @return Return a collection of Student, to make sure you can apply all the collections
-     * methods
+    /*
+        This method allow us to get all the students from the HashMap/db so far created.
      */
     public List<Student> getAllStudents(){
         return students.values().stream().toList();
     }
 
+    /*
+        This method utilize the Java Steam API to create a steam of students,
+        then filter-out a specific student based on the provided studentId.
+     */
     public Student getById(int studentId){
-        return (Student) students.values().stream().
-                filter(s -> s.getId() == studentId);
+        return students.values().stream()
+                .filter(s -> s.getId() == studentId)
+                .findFirst()
+                .orElse(null);
     }
-    /**
-     * Use this method to find and delete a specific student form the list
-     * @param studentId It takes studentId as parameter
-     * @return If the student removed successfully it will return true otherwise false
+
+    /*
+        This method takes a studentId as a param to delete that specific student from the students HashMap.
+        This method return a boolean value either true or false. So, if the user deleted/removed form the
+        memory it will return true otherwise false.
      */
     public boolean deleteStudentById(int studentId){
         Student re = students.remove(studentId);
         return re != null;
     }
-
-
 }
