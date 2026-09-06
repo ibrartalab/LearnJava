@@ -16,5 +16,15 @@ public class BasicThread {
         world.start();
         hello.start();
 
+        // Now to learn the second way of creating thread
+        // by implementing the runnable interface
+        ThreadA threadA = new ThreadA();
+        Thread thread = new Thread(threadA);
+        // There is no direct use of the start method
+        // threadA.start();
+        thread.start();
+        System.out.println(thread.currentThread().getName());
+
+
     }
 }
