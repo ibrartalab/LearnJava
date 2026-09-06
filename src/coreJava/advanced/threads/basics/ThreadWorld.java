@@ -1,4 +1,4 @@
-package coreJava.advanced.threads;
+package coreJava.advanced.threads.basics;
 
 public class ThreadWorld extends Thread{
     @Override

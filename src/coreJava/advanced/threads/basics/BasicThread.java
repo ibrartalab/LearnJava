@@ -1,4 +1,4 @@
-package coreJava.advanced.threads;
+package coreJava.advanced.threads.basics;
 
 public class BasicThread {
     static void main(String[] args) {
