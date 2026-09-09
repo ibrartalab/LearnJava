@@ -10,7 +10,7 @@ public class Test {
             public void run() {
                 try {
                     for (int i = 1; i <= 1000; i++) {
-                        counter.increment(1);
+                        counter.increment2(1);
                     }
                 }catch (Exception e){
 

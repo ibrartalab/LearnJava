@@ -11,6 +11,12 @@ public class Counter {
         this.counter += counter;
     }
 
+    public void increment2(int counter){
+        synchronized(this) {
+            this.counter += counter;
+        }
+    }
+
     public int getCounter(){
         return counter;
     }
