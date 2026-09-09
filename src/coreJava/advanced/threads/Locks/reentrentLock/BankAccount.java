@@ -19,6 +19,7 @@ public class BankAccount {
                         balance -= amount;
                         System.out.println(Thread.currentThread().getName() + " "+ " Transaction success:Remaining balance: " + balance);
                     }catch (InterruptedException e){
+                        Thread.currentThread().interrupt();
                         throw new RuntimeException(e);
                     }finally {
                         lock.unlock();
@@ -30,6 +31,7 @@ public class BankAccount {
                 System.out.println(Thread.currentThread().getName() + " "+ "Another process trying for the same resource.");
             }
         } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
             throw new RuntimeException(e);
         }
     }
