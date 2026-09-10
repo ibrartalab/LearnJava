@@ -15,8 +15,15 @@ public class SharedResources {
         }
         data = value;
         hasData = true;
-        System.out.println("Produced: " + value);
-        notify();
+        System.out.println(" Produced: " + value);
+        // If there are multiple consumers to consume this data,
+        // then notify() will create a deadlock, because you only notify
+        // a single consumer to consume this data not all of them.
+
+//        notify();
+
+        // To avoid deadlocks we should used notifyAll()
+        notifyAll();
     }
 
     public synchronized int consume(){
@@ -29,7 +36,7 @@ public class SharedResources {
             }
         }
         hasData = false;
-        System.out.println("Consume: " + data);
+        System.out.println(" Consume: " + data);
         notify();
         return data;
     }
